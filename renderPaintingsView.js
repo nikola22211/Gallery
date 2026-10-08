@@ -13,7 +13,10 @@ export const renderPaintings = function (paintings) {
       br++;
       markup = ``;
     }
-    markup = `<img class="img img${j}" src=${p.src} />`;
-    containers[br].insertAdjacentHTML(`beforeend`, markup);
+    let img = document.createElement(`img`);
+    img.src = p.src;
+    img.classList.add(`img`);
+    img.classList.add(`img${j}`);
+    containers[br].appendChild(img);
   });
 };

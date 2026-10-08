@@ -8,9 +8,11 @@
 }
 .container {
   height: 90vh;
+  width: 60%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 .img {
-  width: 250px;
+  width: 200px;
 }
