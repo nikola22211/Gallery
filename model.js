@@ -83,6 +83,12 @@ const painting15 = {
   src: "./imgs/The_Swing_(P430).jpg",
 };
 
+const painting16 = {
+  painter: "Caravaggio",
+  name: "Cupid as Victor",
+  src: "./imgs/Caravaggio_cupid.jpg",
+};
+
 export const paintings = [
   painting1,
   painting2,
@@ -99,4 +105,5 @@ export const paintings = [
   painting13,
   painting14,
   painting15,
+  painting16,
 ];

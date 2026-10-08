@@ -6,12 +6,10 @@ const cont4 = document.querySelector(`.cont4`);
 const containers = [cont1, cont2, cont3, cont4];
 
 export const renderPaintings = function (paintings) {
-  let markup = ``;
   let br = 0;
   paintings.forEach((p, j) => {
     if (j % 4 === 0 && j !== 0) {
       br++;
-      markup = ``;
     }
     let img = document.createElement(`img`);
     img.src = p.src;
