@@ -13,10 +13,29 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.divPic {
+.div-pic {
   position: relative;
 }
-.img {
+.div-pic .img {
   width: 220px;
   margin-bottom: 27px;
+}
+.painter {
+  position: absolute;
+  bottom: 40px;
+  left: 15px;
+  color: rgb(237, 237, 237);
+  font-size: 13px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.name {
+  position: absolute;
+  bottom: 59px;
+  left: 15px;
+  color: aliceblue;
+  padding-right: 50px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }

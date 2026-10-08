@@ -22,8 +22,8 @@ const painting4 = {
 };
 
 const painting5 = {
-  painter: "Girl with a Pearl Earring",
-  name: "Johannes Vermeer",
+  painter: "Johannes Vermeer",
+  name: "Girl with a Pearl Earring",
   src: "./imgs/Girl_with_a_Pearl_Earring.jpg",
 };
 

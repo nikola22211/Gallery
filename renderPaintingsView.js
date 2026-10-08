@@ -11,12 +11,27 @@ export const renderPaintings = function (paintings) {
     if (j % 4 === 0 && j !== 0) {
       br++;
     }
-    // const divHelper = document.createElement(`div`);
-    // const pPainter = document.createElement(`p`);
+    const divHelper = document.createElement(`div`);
+    const pPainter = document.createElement(`p`);
+    const pName = document.createElement(`p`);
+
+    divHelper.classList.add(`div-pic`);
+    divHelper.classList.add(`div-pic--${j}`);
+
+    pPainter.textContent = p.painter;
+    pName.textContent = p.name;
+
+    pPainter.classList.add(`painter`);
+    pName.classList.add(`name`);
+
     const img = document.createElement(`img`);
     img.src = p.src;
     img.classList.add(`img`);
     img.classList.add(`img${j}`);
-    containers[br].appendChild(img);
+
+    divHelper.appendChild(img);
+    divHelper.appendChild(pName);
+    divHelper.appendChild(pPainter);
+    containers[br].appendChild(divHelper);
   });
 };
