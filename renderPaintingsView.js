@@ -11,7 +11,9 @@ export const renderPaintings = function (paintings) {
     if (j % 4 === 0 && j !== 0) {
       br++;
     }
-    let img = document.createElement(`img`);
+    // const divHelper = document.createElement(`div`);
+    // const pPainter = document.createElement(`p`);
+    const img = document.createElement(`img`);
     img.src = p.src;
     img.classList.add(`img`);
     img.classList.add(`img${j}`);

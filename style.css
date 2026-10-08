@@ -8,12 +8,15 @@
 }
 .container {
   height: 90vh;
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+.divPic {
+  position: relative;
+}
 .img {
-  width: 200px;
-  margin-bottom: 28px;
+  width: 220px;
+  margin-bottom: 27px;
 }
