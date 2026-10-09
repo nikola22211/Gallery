@@ -11,7 +11,7 @@ class RenderOnePainting {
       this._modal.classList.remove(`hidden`);
       console.log(img);
       const pic = handler(img);
-      // console.log(pic);
+
       this.generateMarkup(pic);
       this.closeModal();
     });

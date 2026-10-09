@@ -81,7 +81,7 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  border: 5px solid gold;
+  border: 5px groove gold;
 }
 .hidden {
   display: none;
@@ -117,4 +117,26 @@
   right: 200px;
   color: rgba(234, 234, 236, 0.136);
   font-size: 350px;
+}
+.slideshow-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn_pn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 217, 0, 0.566);
+  border: none;
+}
+.btn-prev {
+  margin-left: 100px;
+}
+.btn-next {
+  margin-right: 100px;
+}
+.icon {
+  stroke: black;
 }
