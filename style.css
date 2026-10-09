@@ -14,28 +14,107 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .div-pic {
+  width: fit-content;
+  height: fit-content;
   position: relative;
 }
 .div-pic .img {
   width: 220px;
   margin-bottom: 27px;
+  display: block;
+}
+.div-pic::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  pointer-events: none;
 }
 .painter {
   position: absolute;
-  bottom: 40px;
+  bottom: 15px;
   left: 15px;
-  color: rgb(237, 237, 237);
+  color: #fff;
   font-size: 13px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 .name {
   position: absolute;
-  bottom: 59px;
+  bottom: 35px;
   left: 15px;
-  color: aliceblue;
-  padding-right: 50px;
+  color: #fff;
+  padding-right: 20px;
   font-size: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+}
+.close-modal {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  cursor: pointer;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+}
+.one-painting {
+  max-height: 80vh;
+  max-width: 80vw;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 5px solid gold;
+}
+.hidden {
+  display: none;
+}
+.painting-desc {
+  padding-left: 90px;
+  width: 500px;
+  color: #fff;
+  text-shadow: 2px 2px 3px black;
+}
+.divHelper {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  padding-left: 90px;
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 2px black;
+}
+.author {
+  padding-left: 95px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 2px black;
+}
+.year-desc {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 200px;
+  color: rgba(234, 234, 236, 0.136);
+  font-size: 350px;
 }

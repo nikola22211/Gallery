@@ -11,27 +11,35 @@ export const renderPaintings = function (paintings) {
     if (j % 4 === 0 && j !== 0) {
       br++;
     }
-    const divHelper = document.createElement(`div`);
-    const pPainter = document.createElement(`p`);
-    const pName = document.createElement(`p`);
+    const divHelper = helperFun(p, j);
 
-    divHelper.classList.add(`div-pic`);
-    divHelper.classList.add(`div-pic--${j}`);
-
-    pPainter.textContent = p.painter;
-    pName.textContent = p.name;
-
-    pPainter.classList.add(`painter`);
-    pName.classList.add(`name`);
-
-    const img = document.createElement(`img`);
-    img.src = p.src;
-    img.classList.add(`img`);
-    img.classList.add(`img${j}`);
-
-    divHelper.appendChild(img);
-    divHelper.appendChild(pName);
-    divHelper.appendChild(pPainter);
     containers[br].appendChild(divHelper);
   });
+};
+
+const helperFun = function (p, j) {
+  const divHelper = document.createElement(`div`);
+  const pPainter = document.createElement(`p`);
+  const pName = document.createElement(`p`);
+
+  divHelper.classList.add(`div-pic`);
+  divHelper.classList.add(`div-pic--${j}`);
+  divHelper.dataset.num = j + 1;
+
+  pPainter.textContent = p.painter;
+  pName.textContent = p.name;
+
+  pPainter.classList.add(`painter`);
+  pName.classList.add(`name`);
+
+  const img = document.createElement(`img`);
+  img.src = p.src;
+  img.classList.add(`img`);
+  img.classList.add(`img${j}`);
+
+  divHelper.appendChild(img);
+  divHelper.appendChild(pName);
+  divHelper.appendChild(pPainter);
+
+  return divHelper;
 };
