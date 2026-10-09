@@ -1,6 +1,8 @@
 class RenderSlideshow {
   _parentElement = document.querySelector(`header`);
   _modal = document.querySelector(`.modal`);
+  _picCurrent;
+  _handler;
 
   openSlideshow(handler, handler2) {
     this._parentElement.addEventListener(`click`, (e) => {
@@ -12,9 +14,11 @@ class RenderSlideshow {
       console.log(btnSlide);
       const pic = handler();
       this.generateMarkup(pic);
-      this.closeModal();
-      this.nextPrevious(pic, handler2);
+
+      this._picCurrent = pic;
+      this._handler = handler2;
     });
+    this.nextPrevious();
   }
 
   generateMarkup(pic) {
@@ -39,17 +43,19 @@ class RenderSlideshow {
       }
     });
   }
-
-  nextPrevious(pic, handler) {
-    let picCurrent = pic;
+  nextPrevious() {
     this._modal.addEventListener(`click`, (e) => {
       const btnGo = e.target.closest(`.btn_pn`);
+
       if (!btnGo) {
         return;
       }
-      console.log(btnGo);
-      picCurrent = handler(picCurrent, btnGo);
-      this.generateMarkup(picCurrent);
+      const pic = this._handler(this._picCurrent, btnGo);
+      if (!pic) {
+        return;
+      }
+      this._picCurrent = pic;
+      this.generateMarkup(this._picCurrent);
     });
   }
 }

@@ -33,5 +33,7 @@ const init = function () {
   renderPaintings(model.paintings);
   renderOnePainting.renderOne(controlOnePainting);
   renderSlideshow.openSlideshow(controlSlideshow, controlNextPrevious);
+  renderOnePainting.closeModal();
+  renderSlideshow.closeModal();
 };
 init();

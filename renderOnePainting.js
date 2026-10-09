@@ -13,7 +13,6 @@ class RenderOnePainting {
       const pic = handler(img);
 
       this.generateMarkup(pic);
-      this.closeModal();
     });
   }
 
@@ -23,6 +22,7 @@ class RenderOnePainting {
         this._modal.classList.add(`hidden`);
       }
     });
+
     document.addEventListener(`keydown`, (e) => {
       if (e.key === `Escape` && !this._modal.classList.contains(`hidden`)) {
         this._modal.classList.add(`hidden`);
