@@ -1,6 +1,7 @@
-class RenderOnePainting {
+import View from "./view.js";
+
+class RenderOnePainting extends View {
   _parentEl = document.querySelector(`.container`);
-  _modal = document.querySelector(`.modal`);
 
   renderOne(handler) {
     this._parentEl.addEventListener(`click`, (e) => {
@@ -13,20 +14,6 @@ class RenderOnePainting {
       const pic = handler(img);
 
       this.generateMarkup(pic);
-    });
-  }
-
-  closeModal() {
-    this._modal.addEventListener(`click`, (e) => {
-      if (e.target.closest(`.close-modal`)) {
-        this._modal.classList.add(`hidden`);
-      }
-    });
-
-    document.addEventListener(`keydown`, (e) => {
-      if (e.key === `Escape` && !this._modal.classList.contains(`hidden`)) {
-        this._modal.classList.add(`hidden`);
-      }
     });
   }
 

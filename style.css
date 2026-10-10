@@ -3,13 +3,30 @@
   padding: 0;
   box-sizing: border-box;
 }
-.header {
-  height: 10vh;
+header {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.galleria {
+  font-size: 30px;
+  font-weight: 800;
+  margin-left: 20px;
+}
+.slideshow {
+  padding: 12px 24px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-weight: 300;
 }
 .container {
   height: 90vh;
   width: 65%;
-  margin: 0 auto;
+  margin: 30px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -113,10 +130,11 @@
 .year-desc {
   display: block;
   position: absolute;
-  top: 60px;
+  top: 40px;
   right: 200px;
   color: rgba(234, 234, 236, 0.136);
   font-size: 350px;
+  user-select: none;
 }
 .slideshow-div {
   width: 100%;

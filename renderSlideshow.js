@@ -1,6 +1,7 @@
-class RenderSlideshow {
+import View from "./view.js";
+
+class RenderSlideshow extends View {
   _parentElement = document.querySelector(`header`);
-  _modal = document.querySelector(`.modal`);
   _picCurrent;
   _handler;
 
@@ -36,13 +37,6 @@ class RenderSlideshow {
     this._modal.insertAdjacentHTML(`beforeend`, markup);
   }
 
-  closeModal() {
-    document.addEventListener(`keydown`, (e) => {
-      if (e.key === `Escape` && !this._modal.classList.contains(`hidden`)) {
-        this._modal.classList.add(`hidden`);
-      }
-    });
-  }
   nextPrevious() {
     this._modal.addEventListener(`click`, (e) => {
       const btnGo = e.target.closest(`.btn_pn`);
