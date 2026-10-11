@@ -29,7 +29,8 @@ const controlNextPrevious = function (pic, btnGo) {
   }
 };
 
-const init = function () {
+const init = async function () {
+  await model.addDescription();
   renderPaintings(model.paintings);
   renderOnePainting.renderOne(controlOnePainting);
   renderSlideshow.openSlideshow(controlSlideshow, controlNextPrevious);

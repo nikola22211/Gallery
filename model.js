@@ -139,3 +139,15 @@ export const paintings = [
   painting15,
   painting16,
 ];
+
+export const addDescription = async function () {
+  const response = await fetch(`./paintings.txt`);
+  const text = await response.text();
+  let arrDesc = text.split(`\n`);
+  arrDesc = arrDesc.filter((el) => el !== `\r`);
+  console.log(arrDesc);
+  paintings.forEach((el, i) => {
+    el.description = arrDesc[i].slice(3);
+  });
+  console.log(text);
+};
